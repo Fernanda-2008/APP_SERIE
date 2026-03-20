@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>K-Drama App</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- PANTALLA 1 -->
+    <section id="inicio" class="pantalla activa">
+        <h1>💜 K-Drama App</h1>
+        <h3>Fernanda Donaciano Martínez</h3>
+
+        <p>
+        Bienvenida a tu app de series coreanas ✨  
+        Explora historias llenas de amor, drama y emociones.
+        </p>
+
+        <button onclick="cambiar('serie')">🌸 Ver Serie</button>
+        <button onclick="cambiar('info')">💌 Más info</button>
+    </section>
+
+    <!-- PANTALLA 2 -->
+    <section id="serie" class="pantalla">
+        <h2>Boys Over Flowers 🌸</h2>
+
+        <img src="img/foto1.jpg">
+
+        <p>
+        Geum Jan-di entra a una escuela de élite donde conoce al grupo F4.
+        Entre conflictos y romance, la historia muestra cómo el amor puede cambiarlo todo.
+        </p>
+
+        <button onclick="cambiar('inicio')">⬅ Regresar</button>
+    </section>
+
+    <!-- PANTALLA 3 -->
+    <section id="info" class="pantalla">
+        <h2>Sobre la serie 💕</h2>
+
+        <img src="img/foto2.jpg">
+
+        <p>
+        Uno de los K-dramas más famosos. Habla de amor, amistad y diferencias sociales.
+        </p>
+
+        <button onclick="cambiar('inicio')">⬅ Regresar</button>
+    </section>
+
+</div>
+
+<script>
+function cambiar(pantalla) {
+    document.querySelectorAll('.pantalla').forEach(p => {
+        p.classList.remove('activa');
+    });
+
+    document.getElementById(pantalla).classList.add('activa');
+}
+</script>
+
+</body>
+</html>
